@@ -8,7 +8,7 @@ Para enchufar el laravel
 
 Para crear nuevo proyecto
 
-## php artisan make:migrate create_alumnos_table
+## php artisan make:migration create_alumnos_table
 
 Para crear la tabla alumnos con sus columnas
 

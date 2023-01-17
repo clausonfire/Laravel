@@ -26,7 +26,9 @@ class AlumnosSeeder extends Seeder
             'edad' => 22,
             'password' => 'smashplays',
             'email' => 'jesusitoB@gmail.com',
-            'sexo' => 'masc'
+            'sexo' => 'masc',
+            'teacher_id' => 2
+
         ]);
 
         DB::table('alumnos')->insert([
@@ -35,7 +37,9 @@ class AlumnosSeeder extends Seeder
             'edad' => 22,
             'password' => 'lowenico',
             'email' => 'aaaaaaaa@gmail.com',
-            'sexo' => 'masc'
+            'sexo' => 'masc',
+            'teacher_id' => 3
+
         ]);
         
         DB::table('alumnos')->insert([
@@ -44,7 +48,9 @@ class AlumnosSeeder extends Seeder
             'edad' => 22,
             'password' => 'homewolf',
             'email' => 'eeeeeee@gmail.com',
-            'sexo' => 'fem'
+            'sexo' => 'fem',
+            'teacher_id' => 3
+
         ]);
 
         DB::table('alumnos')->insert([
@@ -53,7 +59,9 @@ class AlumnosSeeder extends Seeder
             'edad' => 22,
             'password' => 'humano 1',
             'email' => 'eeewqee@gmail.com',
-            'sexo' => 'masc'
+            'sexo' => 'masc',
+            'teacher_id' => 2
+
         ]);
 
         DB::table('alumnos')->insert([
@@ -62,7 +70,9 @@ class AlumnosSeeder extends Seeder
             'edad' => 22,
             'password' => 'humano 2',
             'email' => 'eerr@gmail.com',
-            'sexo' => 'masc'
+            'sexo' => 'masc',
+            'teacher_id' => 1
+
         ]);
 
         DB::table('alumnos')->insert([
@@ -71,7 +81,9 @@ class AlumnosSeeder extends Seeder
             'edad' => 22,
             'password' => 'humano 3',
             'email' => 'eegtfd@gmail.com',
-            'sexo' => 'fem'
+            'sexo' => 'fem',
+            'teacher_id' => 2
+
         ]);
     }
 }
