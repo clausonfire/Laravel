@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AlumnoController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,6 +50,9 @@ Route::prefix('/subjects')->group(function() {
     Route::middleware('validate.id')->delete('/{id}', [SubjectController::class, 'deleteSubject']);
 });
 
+Route::post('/login', [LoginController::class, 'login']);
+Route::middleware('islogged')->get('/me', [LoginController::class, 'whoAmI']);
 
+Route::middleware('islogged')->post('/logout', [LoginController::class, 'logout']);
 
-
+Route::get('/noidentify', [LoginController::class, 'noidentified']);
