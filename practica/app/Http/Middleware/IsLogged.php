@@ -17,7 +17,7 @@ class IsLogged
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!Auth::guard(name: 'sanctum')->check()) {
+        if (!Auth::guard(name: 'sanctum')->check()) { //si esta logueado continua el process
             
             $response = [
                 'success' => true,

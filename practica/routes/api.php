@@ -51,8 +51,8 @@ Route::prefix('/subjects')->group(function() {
 });
 
 Route::post('/login', [LoginController::class, 'login']);
-Route::middleware('islogged')->get('/me', [LoginController::class, 'whoAmI']);
+Route::middleware('auth:api')->get('/me', [LoginController::class, 'whoAmI']); //auth por que es middleware que tiene passport por defecto y api por que se cambia el sanctum x api
 
-Route::middleware('islogged')->post('/logout', [LoginController::class, 'logout']);
+Route::middleware('auth:api')->post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/noidentify', [LoginController::class, 'noidentified']);
